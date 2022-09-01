@@ -1,4 +1,5 @@
 import 'package:bug/mygeneric.dart';
+import 'package:bug/mylayout.dart';
 import 'package:flutter/material.dart';
 import 'package:bug/myhomepage.dart';
 import 'package:bug/helloworld.dart';
@@ -7,7 +8,7 @@ import 'package:bug/myprovider.dart';
 import 'package:bug/myhttp.dart';
 import 'package:bug/myhttpclient.dart';
 import 'package:bug/trycatchfinally.dart';
-import 'package:bug/mygeneric.dart';
+
 
 void main() {
   // runApp(MyApp());
@@ -16,7 +17,8 @@ void main() {
   // runApp(MyHttp());
   // runApp(MyHttpClient());
   // runApp(TryCatchFinally());
-  runApp(MyGeneric());
+  // runApp(MyGeneric());
+  runApp(MyLayout());
 }
 
 class MyApp extends StatelessWidget {
