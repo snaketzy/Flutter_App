@@ -5,18 +5,14 @@ class MyScaffold extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
         title: "Scaffold示例",
-        home: MyScaffoldStateFull()
+        // home: MyScaffoldWidget()
+        // home: MyScaffoldStateFull()
+        home: MyTabBar()
     );
   }
 }
 
-class MyScaffoldStateFull extends StatefulWidget {
-  MyScaffoldStateFull({Key? key}) : super(key: key);
-  
-  @override 
-  MyScaffoldState createState() => MyScaffoldState();
-}
-
+// 无state的示例
 class MyScaffoldWidget extends StatelessWidget {
   @override 
   Widget build(BuildContext context) {
@@ -52,6 +48,15 @@ class MyScaffoldWidget extends StatelessWidget {
   }
 }
 
+
+// 带有State的示例
+class MyScaffoldStateFull extends StatefulWidget {
+  MyScaffoldStateFull({Key? key}) : super(key: key);
+  
+  @override 
+  MyScaffoldState createState() => MyScaffoldState();
+}
+
 class MyScaffoldState extends State<MyScaffoldStateFull> {
   int _selectedIndex = 1;
 
@@ -85,6 +90,36 @@ class MyScaffoldState extends State<MyScaffoldStateFull> {
             currentIndex: _selectedIndex,
             onTap: _onItemTapped,
           ),
+    );
+  }
+}
+
+
+// 水平选项卡组件
+class MyTabBar extends StatelessWidget {
+  static List<Tab> myTabs = <Tab>[
+    Tab(text: "选项卡1"),
+    Tab(text: "选项卡2")
+  ];
+
+  @override 
+  Widget build(BuildContext context) {
+    return DefaultTabController(
+      length: myTabs.length,
+      child: Scaffold(
+        appBar: AppBar(
+          title: Text("AppBar标题"),
+            bottom: TabBar(
+              tabs: myTabs,
+            ),
+        ),
+        body: TabBarView(
+          children: myTabs.map((Tab tab) {
+            return Center(child: Text(tab.text as String));
+          }
+        ).toList(),
+      ),
+     )
     );
   }
 }
