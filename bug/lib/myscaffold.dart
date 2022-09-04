@@ -98,8 +98,8 @@ class MyScaffoldState extends State<MyScaffoldStateFull> {
 // 水平选项卡组件
 class MyTabBar extends StatelessWidget {
   static List<Tab> myTabs = <Tab>[
-    Tab(text: "选项卡1"),
-    Tab(text: "选项卡2")
+    Tab(text: "选项卡011"),
+    Tab(text: "选项卡20")
   ];
 
   @override 
