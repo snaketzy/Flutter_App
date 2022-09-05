@@ -14,6 +14,12 @@ import 'package:bug/myscaffold.dart';
 import 'package:bug/myapp.dart';
 import 'package:bug/myroute.dart';
 import 'floatingactionbutton.dart';
+import 'myalertdialog.dart';
+import 'myflatbutton.dart';
+import 'mypopupmenubutton.dart';
+import 'mysimpledialog.dart';
+import 'mysnackbar.dart';
+import 'mytextfield.dart';
 
 
 void main() {
@@ -29,6 +35,12 @@ void main() {
   // runApp(MyRoute());
   // runApp(MyTabBarExample());
   // runApp(MyDrawer());
-  runApp(MyFloatingActionButton());
+  // runApp(MyFloatingActionButton());
+  // runApp(MyFlatButton());
+  // runApp(MyPopupMenuButton());
+  // runApp(MySimpleDialog());
+  // runApp(MyAlertDialog());
+  // runApp(MySnackBar());
+  runApp(MyTextField());
 }
 
