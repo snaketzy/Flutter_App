@@ -12,13 +12,20 @@ class MyCard extends StatelessWidget {
         ),
         body: Center(
           child: SizedBox(
-            height: 250,
+            height: 250.0,
             child: Card(
-
+              child: Column(
+                children: <Widget>[
+                  ListTile(title: Text("道路1"), subtitle: Text("左侧"), leading: Icon(Icons.home),),
+                  Divider(),
+                  ListTile(title: Text("道路2"), subtitle: Text("左侧"), leading: Icon(Icons.school),),
+                  Divider(),
+                ],
+              ),
             ),
           ),
         ),
-      )
+      ),
     );
   }
 }

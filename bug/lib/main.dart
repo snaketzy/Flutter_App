@@ -14,7 +14,10 @@ import 'package:bug/myscaffold.dart';
 import 'package:bug/myapp.dart';
 import 'package:bug/myroute.dart';
 import 'floatingactionbutton.dart';
+import 'myacitvityindicator.dart';
 import 'myalertdialog.dart';
+import 'mycard.dart';
+import 'mycuptertinoalertdialog.dart';
 import 'myflatbutton.dart';
 import 'mypopupmenubutton.dart';
 import 'mysimpledialog.dart';
@@ -41,6 +44,9 @@ void main() {
   // runApp(MySimpleDialog());
   // runApp(MyAlertDialog());
   // runApp(MySnackBar());
-  runApp(MyTextField());
+  // runApp(MyTextField());
+  // runApp(MyCard());
+  // runApp(MyActivityIndicator());
+  runApp(MyCupertinoAlertDialog());
 }
 
