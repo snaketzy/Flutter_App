@@ -15,7 +15,7 @@ class MyCupertinoAlertDialog extends StatelessWidget {
         body: Center(
           child: CupertinoAlertDialog(
             title: Text("提示"),
-            content: Text("11"),
+            content: Text("12"),
             actions: <Widget>[
               CupertinoDialogAction(child: Text("确定"), onPressed: () {},),
               CupertinoDialogAction(child: Text("取消"), onPressed: () {}, isDestructiveAction: true,),
