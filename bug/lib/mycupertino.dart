@@ -10,7 +10,7 @@ class MyCuptertino extends StatelessWidget {
       home: Scaffold(
         appBar: AppBar(title: Text("Cupertino组件")),
         body: Center(
-          child: ,
+          child: Text(""),
         ),
       ),
 
