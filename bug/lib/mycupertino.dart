@@ -17,3 +17,27 @@ class MyCuptertino extends StatelessWidget {
     );
   }
 }
+
+class MyPage extends StatefulWidget {
+  @override
+  _MyPageState createState () => _MyPageState();
+}
+
+class _MyPageState extends State<MyPage> {
+  @override
+  Widget build(BuildContext context) {
+    return CupertinoTabScaffold(
+      tabBar: CupertinoTabBar(
+          items: [
+            BottomNavigationBarItem(
+                icon: Icon(CupertinoIcons.home),
+                title: Text("主页")
+            )
+          ],
+      ),
+      tabBuilder: (context, index) {
+        return Text("test");
+      },
+    );
+  }
+}
