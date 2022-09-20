@@ -9,12 +9,13 @@ class MyCupertinoButton extends StatelessWidget {
       title: "CupertinoButton组件",
       home: Scaffold(
         appBar: AppBar(
-          title: Text("CupertinoButton组件")
+          title: Text("CupertinoButton组件"),
+          centerTitle: true,
         ),
         body: Center(
           child: CupertinoButton(
             child: Text(
-              "CupertinoButton"
+              "CupertinoButton组件"
             ),
             color: Colors.blue,
             onPressed: () {},

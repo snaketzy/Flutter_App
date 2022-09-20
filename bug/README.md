@@ -1,6 +1,6 @@
 # bug
 
-A new Flutter project.
+Flutter 入门项目
 
 ## Getting Started
 

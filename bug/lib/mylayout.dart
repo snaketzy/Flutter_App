@@ -1,4 +1,5 @@
 
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 // 布局测试 
@@ -12,7 +13,8 @@ class MyLayout extends StatelessWidget {
      title: "布局测试",
      home: Scaffold(
         appBar: AppBar(
-          title: Text("布局测试")
+          title: Text("布局测试"),
+          centerTitle: true,
         ),
         body: Center(
           // child: Text("布局测试"),
@@ -25,12 +27,175 @@ class MyLayout extends StatelessWidget {
           // child: MyListView()
           // child: MyLongListView(items:itemsContent)
           // child: MyGridView()
-          child: MyForm()
+          // child: MyForm()
+          // child: MyLayoutDemo()
+          // child: MyFittedBox()
+          // child: MyStack()
+          // child: MyIndexStack()
+          child: MyOverflowBox()
         ),
       ),
     );
   }
 }
+
+// 横竖布局
+class MyLayoutDemo extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    Widget container = Container(
+      decoration: BoxDecoration(
+        color: Colors.grey
+      ),
+      child: Column(
+        children: <Widget>[
+          Row(children: <Widget>[
+            Expanded(child:Container(
+              width: 150,
+              height: 150,
+              decoration: BoxDecoration(
+                border: Border.all(width:10, color: Colors.blueGrey),
+                borderRadius: BorderRadius.all(Radius.circular(8)),
+              ),
+              margin: EdgeInsets.all(4),
+              child: Image.asset("assets/images/1.jpg"),
+            )),
+            Expanded(child:Container(
+              width: 150,
+              height: 150,
+              decoration: BoxDecoration(
+                border: Border.all(width:10, color: Colors.blueGrey),
+                borderRadius: BorderRadius.all(Radius.circular(8)),
+              ),
+              margin: EdgeInsets.all(4),
+              child: Image.asset("assets/images/1.jpg"),
+            ))
+          ],),
+          Row(children: <Widget>[
+            Expanded(child:Container(
+              width: 150,
+              height: 150,
+              decoration: BoxDecoration(
+                border: Border.all(width:10, color: Colors.blueGrey),
+                borderRadius: BorderRadius.all(Radius.circular(8)),
+              ),
+              margin: EdgeInsets.all(4),
+              child: Image.asset("assets/images/1.jpg"),
+            )),
+            Expanded(child:Container(
+              width: 150,
+              height: 150,
+              decoration: BoxDecoration(
+                border: Border.all(width:10, color: Colors.blueGrey),
+                borderRadius: BorderRadius.all(Radius.circular(8)),
+              ),
+              margin: EdgeInsets.all(4),
+              child: Image.asset("assets/images/1.jpg"),
+            ))
+          ],)
+        ],
+      ),
+    );
+
+    return container;
+  }
+}
+
+
+// 缩放布局
+class MyFittedBox extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: Text("FittedBox缩放布局"),),
+      body: Container(
+        color: Colors.grey,
+        // padding: EdgeInsets.all(10),
+        width: 300,
+        height: 150,
+        child: FittedBox(
+          fit: BoxFit.contain,
+          clipBehavior: Clip.hardEdge,
+          alignment: Alignment.topLeft,
+          child: Container(
+            color: Colors.deepPurple,
+            child: Text("缩放布局"),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+// Stack布局
+class MyStack extends StatelessWidget {
+  @override 
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: Text("层叠定位"), centerTitle: true,),
+      body: Center(
+        child: Stack(
+          children: <Widget>[
+            Image.network("https://flutter.github.io/assets-for-api-docs/assets/widgets/owl.jpg"),
+            Positioned(
+                bottom: 50,
+                right: 50,
+                child: Text("hi flutter", style: TextStyle(fontSize: 36, fontWeight: FontWeight.bold, color: Colors.white),),
+            )
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+// IndexStack布局
+class MyIndexStack extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: Text("层叠定位"), centerTitle: true,),
+      body: Center(
+        child: IndexedStack(
+          index: 1,
+          alignment: FractionalOffset(0.2, 0.2),
+          children: <Widget>[
+            CircleAvatar(backgroundImage: AssetImage("assets/images/1.jpg"), radius: 100,),
+            Container(decoration: BoxDecoration(color: Colors.blueAccent), child: Text("超级", style: TextStyle(backgroundColor: Colors.brown),),),
+
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+// OverFlow溢出父容器
+class MyOverflowBox extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: Text("OverFlow溢出父容器"), centerTitle: true,),
+      body: Container(
+        color: Colors.green,
+        width: 100,
+        height: 100,
+        padding: EdgeInsets.all(20),
+        child: OverflowBox(
+          alignment: Alignment.topLeft,
+          maxWidth: 300,
+          maxHeight: 300,
+          child: Container(
+            color: Colors.greenAccent,
+            width: 200,
+            height: 300,
+          ),
+        ),
+      ),
+    );
+  }
+}
+
 
 // Container组件 https://api.flutter-io.cn/flutter/widgets/Container-class.html
 class MyContainer extends StatelessWidget {
