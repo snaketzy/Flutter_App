@@ -28,6 +28,7 @@ import 'mytextfield.dart';
 import 'myboxsizehandle.dart';
 import 'mylist.dart';
 import 'myassembledemo.dart';
+import 'mygesturedetector.dart';
 
 
 void main() {
@@ -57,6 +58,7 @@ void main() {
   // runApp(MyCupertino());
   // runApp(MyBoxsizeHandle());
   // runApp(MyList());
-  runApp(MyAssembleDemo());
+  // runApp(MyAssembleDemo());
+  runApp(MyGestureDetector());
 }
 
