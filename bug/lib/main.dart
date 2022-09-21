@@ -27,6 +27,7 @@ import 'mysnackbar.dart';
 import 'mytextfield.dart';
 import 'myboxsizehandle.dart';
 import 'mylist.dart';
+import 'myassembledemo.dart';
 
 
 void main() {
@@ -55,6 +56,7 @@ void main() {
   // runApp(MyCupertinoButton());
   // runApp(MyCupertino());
   // runApp(MyBoxsizeHandle());
-  runApp(MyList());
+  // runApp(MyList());
+  runApp(MyAssembleDemo());
 }
 
