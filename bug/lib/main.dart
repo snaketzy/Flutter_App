@@ -29,6 +29,10 @@ import 'myboxsizehandle.dart';
 import 'mylist.dart';
 import 'myassembledemo.dart';
 import 'mygesturedetector.dart';
+import 'myassets.dart';
+import 'mydecoration.dart';
+import 'Chapter 11/myfullroute.dart';
+import 'Chapter 11/mydataroute.dart';
 
 
 void main() {
@@ -59,6 +63,10 @@ void main() {
   // runApp(MyBoxsizeHandle());
   // runApp(MyList());
   // runApp(MyAssembleDemo());
-  runApp(MyGestureDetector());
+  // runApp(MyGestureDetector());
+  // runApp(MyAssets());
+  // runApp(MyDecoration());
+  // runApp(MyFullRoute());
+  runApp(MyDataRoute());
 }
 
