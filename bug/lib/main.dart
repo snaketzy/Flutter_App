@@ -33,6 +33,8 @@ import 'myassets.dart';
 import 'mydecoration.dart';
 import 'Chapter 11/myfullroute.dart';
 import 'Chapter 11/mydataroute.dart';
+import 'Chapter 11/mybackroute.dart';
+import 'components/app/app_component.dart';
 
 
 void main() {
@@ -67,6 +69,8 @@ void main() {
   // runApp(MyAssets());
   // runApp(MyDecoration());
   // runApp(MyFullRoute());
-  runApp(MyDataRoute());
+  // runApp(MyDataRoute());
+  // runApp(MyBackRoute());
+  runApp(AppComponent());
 }
 
