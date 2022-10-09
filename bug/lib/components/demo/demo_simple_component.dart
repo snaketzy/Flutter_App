@@ -11,6 +11,7 @@ class DemoSimpleComponent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    print("颜色是:${color}");
     return Material(
       color: color,
       child: Column(
