@@ -9,6 +9,7 @@ var rootHandler = Handler(
       return HomeComponent();
     });
 
+// 路由处理句柄
 var demoRouteHandler = Handler(
     handlerFunc: (BuildContext? context, Map<String, List<String>> params) {
       String? message = params["message"]?.first;
@@ -33,7 +34,7 @@ var demoFunctionHandler = Handler(
             title: Text(
               "Hey Hey!",
               style: TextStyle(
-                color: const Color(0xFF00D6F7),
+                color: const Color(0xFF3B3735),
                 fontFamily: "Lazer84",
                 fontSize: 22.0,
               ),

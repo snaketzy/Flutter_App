@@ -61,7 +61,7 @@ flutter:
     - assets/images/acc_boom.png
     - assets/images/ic_function_hz.png
     - assets/images/ic_result_hz.png
-    - assets/images/ic_transform_custom_hz.png
+#    - assets/images/ic_transform_custom_hz.png
     - assets/images/ic_transform_fade_in_hz.png
     - assets/images/ic_transform_fade_out_hz.png
     - assets/images/ic_transform_global_hz.png

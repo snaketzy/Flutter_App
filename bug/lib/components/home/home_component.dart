@@ -102,7 +102,7 @@ class HomeComponentState extends State<HomeComponent> {
     final childRatio = (size.width / size.height) * 2.5;
 
     return Material(
-      color: const Color(0xFF00D6F7),
+      color: const Color(0xFF414DB1), // Material背景色
       child: SafeArea(
         top: true,
         child: Column(
@@ -135,7 +135,7 @@ class HomeComponentState extends State<HomeComponent> {
     );
   }
 
-  // helpers
+  // helpers 点击的按钮
   Widget menuButton(
       BuildContext context, String assetSrc, String title, String key) {
     return Padding(
@@ -175,15 +175,17 @@ class HomeComponentState extends State<HomeComponent> {
     );
   }
 
-  // actions
+  // actions 按钮动作
   void tappedMenuButton(BuildContext context, String key) {
     String message = "";
     String hexCode = "#FFFFFF";
     String? result;
     TransitionType transitionType = TransitionType.native;
     if (key != "custom" && key != "function-call" && key != "fixed-trans") {
+      // 当前显示的模块
       if (key == "native") {
-        hexCode = "#F76F00";
+        // hexCode = "#F76F00";
+        hexCode = "#C9C9C9";
         message =
         "This screen should have appeared using the default flutter animation for the current OS";
       } else if (key == "preset-from-left") {
@@ -209,11 +211,16 @@ class HomeComponentState extends State<HomeComponent> {
         route = "$route&result=$result";
       }
 
-      Application.router
-          .navigateTo(context, route, transition: transitionType)
-          .then((result) {
+      Application.router.navigateTo(
+          context,
+          route,
+          transition: transitionType
+      ).then((result) {
         if (key == "pop-result") {
-          Application.router.navigateTo(context, "/demo/func?message=$result");
+          Application.router.navigateTo(
+              context,
+              "/demo/func?message=$result"
+          );
         }
       });
     } else if (key == "custom") {
@@ -239,10 +246,14 @@ class HomeComponentState extends State<HomeComponent> {
       );
     } else if (key == "fixed-trans") {
       Application.router.navigateTo(
-          context, "/demo/fixedtrans?message=Hello!&color_hex=#f4424b");
+          context, "/demo/fixedtrans?message=Hello!&color_hex=#f4424b"
+      );
     } else {
       message = "You tapped the function button!";
-      Application.router.navigateTo(context, "/demo/func?message=$message");
+      Application.router.navigateTo(
+          context,
+          "/demo/func?message=$message"
+      );
     }
   }
 }
