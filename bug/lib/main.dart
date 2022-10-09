@@ -31,10 +31,10 @@ import 'myassembledemo.dart';
 import 'mygesturedetector.dart';
 import 'myassets.dart';
 import 'mydecoration.dart';
-import 'Chapter 11/myfullroute.dart';
-import 'Chapter 11/mydataroute.dart';
-import 'Chapter 11/mybackroute.dart';
-import 'components/app/app_component.dart';
+import 'Chapter 11/route/myfullroute.dart';
+import 'Chapter 11/route/mydataroute.dart';
+import 'Chapter 11/route/mybackroute.dart';
+import 'Chapter 11/route/fluro/components/app/app_component.dart';
 
 
 void main() {
